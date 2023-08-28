@@ -9,7 +9,11 @@ export default function FeedBox() {
   //   link: string,
   //   likesCount: number
   //   commentsCount: number
+  //   tags: string[]
   //   hasImage: bool
+
+  const dummyTags = ["tag1", "tag2", "tag3"];
+
   return (
     <div
       style={{ margin: "10px 0" }}
@@ -28,10 +32,27 @@ export default function FeedBox() {
             someaccount123
           </h5>
         </a>
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-sm font-light text-gray-900 dark:text-gray-400">
+            2021-08-01
+          </span>
+        </div>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           Here are the biggest enterprise technology acquisitions of 2021 so
           far, in reverse chronological order.
         </p>
+        <div className="grid grid-cols-12 gap-2">
+          {dummyTags.map((tag, index) => (
+            <Link
+              key={index}
+              href={`/tag/${tag}`}
+              className="px-2 py-1 text-sm bg-blue-500 text-white rounded-full hover:bg-blue-600"
+            >
+              {tag}
+            </Link>
+          ))}
+        </div>
+
         <div className="grid grid-cols-12 gap-0 my-2">
           <div>
             <FontAwesomeIcon style={{ color: "#47dd62" }} icon={faHeart} />
@@ -43,7 +64,7 @@ export default function FeedBox() {
           </div>
         </div>
         <Link
-          href="/12"
+          href="/post/12"
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Check Out

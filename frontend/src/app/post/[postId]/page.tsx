@@ -2,8 +2,12 @@ import CommentSection from "@/components/CommentSection";
 import NavigationBar from "@/components/NavigationBar";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useParams } from "next/navigation";
 
 export default function postPage() {
+  const params = useParams();
+  const postId = params.uid;
+
   return (
     <>
       <NavigationBar />
