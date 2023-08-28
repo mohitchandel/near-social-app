@@ -1,3 +1,4 @@
+"use client";
 import CommentSection from "@/components/CommentSection";
 import NavigationBar from "@/components/NavigationBar";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +36,7 @@ export default function postPage() {
                 so far, in reverse chronological order.
               </p>
               <div>
-                <button className="">
+                <button>
                   <FontAwesomeIcon
                     style={{ color: "#47dd62" }}
                     icon={faHeart}
