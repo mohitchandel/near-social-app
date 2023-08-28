@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function FeedBox() {
   //   image: string,
@@ -33,7 +34,7 @@ export default function FeedBox() {
         </p>
         <div className="grid grid-cols-12 gap-0 my-2">
           <div>
-            <FontAwesomeIcon icon={faHeart} />
+            <FontAwesomeIcon style={{ color: "#47dd62" }} icon={faHeart} />
             <span style={{ paddingInline: "5px" }}>12</span>
           </div>
           <div>
@@ -41,8 +42,8 @@ export default function FeedBox() {
             <span style={{ paddingInline: "5px" }}>9</span>
           </div>
         </div>
-        <a
-          href="#"
+        <Link
+          href="/12"
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Check Out
@@ -61,7 +62,7 @@ export default function FeedBox() {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   );
